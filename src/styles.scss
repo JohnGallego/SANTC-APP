@@ -15,3 +15,20 @@ app-root {
   flex-direction: column;
   height: 100vh;
 }
+
+.text-normal {
+  opacity: 0.6;
+}
+
+.text-subdued {
+  opacity: 0.4;
+}
+
+.only-text {
+  cursor: default;
+}
+
+
+.nav-item.nav-link {
+  cursor: pointer;
+}
