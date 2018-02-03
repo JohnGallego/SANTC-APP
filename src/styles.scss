@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/variables';
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+html, body {
+  height: 100%;
+  padding: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
