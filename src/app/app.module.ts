@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // libs
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // app
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,9 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     BrowserModule,
+
+    // libs
+    NgbModule.forRoot(),
 
     // app
     AppRoutingModule,
