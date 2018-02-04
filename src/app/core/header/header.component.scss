@@ -1,3 +1,15 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.header {
+  padding: 0;
+}
+
+.navbar-brand {
+  font-size: 20px;
+}
+
 .nav-link {
 	font-size: 20px;
 	font-weight: 300;
@@ -6,4 +18,10 @@
 
 .nav-link.active {
   font-weight: 500;
+}
+
+@include media-breakpoint-between(sm, md) {
+  .header {
+    max-width: 100%;
+  }
 }
