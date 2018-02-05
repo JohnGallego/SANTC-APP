@@ -8,9 +8,11 @@ import { HeaderComponent } from './header/header.component';
   ],
   declarations: [
     HeaderComponent
+    HeaderComponent,
   ],
   exports: [
     HeaderComponent
+    HeaderComponent,
   ]
 })
 export class CoreModule { }
