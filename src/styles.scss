@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/mixins';
-@import '~bootstrap/scss/variables';
 @import './variables';
 @import '~bootstrap/scss/bootstrap';
 
@@ -31,4 +30,8 @@ app-root {
 
 .nav-item.nav-link {
   cursor: pointer;
+}
+
+.flex-grow {
+  flex: 1 0 auto;
 }

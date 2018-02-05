@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isCollapsed = true;
+  context = 'View';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeContext( context: string ) {
+    this.context = context;
   }
 
 }
