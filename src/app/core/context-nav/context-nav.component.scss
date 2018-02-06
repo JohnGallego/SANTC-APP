@@ -3,23 +3,38 @@
 
 .navbar {
   padding-bottom: 0;
+  padding-top: 0;
 }
 
 .nav-link {
   text-decoration: none;
   font-size: 18px;
+  font-weight: 300;
   letter-spacing: 1px;
 
   &.active {
     font-weight: 500;
     border-radius: 0;
-    border-bottom: $primary solid 5px;
+    border-bottom: $primary solid 3px;
+  }
+
+  &:hover {
+    font-weight: 400;
   }
 
 }
 
 .separator {
   margin: 0;
-  height: 2px;
-  background: #A9A3E3;;
+  height: 1px;
+  background: #A9A3E3;
 }
+
+.kids, .other, .meals {
+  width: 75px;
+}
+
+.teachers, .activities {
+  width: 100px;
+}
+
