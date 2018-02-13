@@ -8,6 +8,7 @@
         <button class="dropdown-item" (click)="changeContext('Meals')">Meals</button>
         <button class="dropdown-item" (click)="changeContext('Teachers')">Teachers</button>
         <button class="dropdown-item" (click)="changeContext('Activities')">Activities</button>
+        <button class="dropdown-item" (click)="changeContext('Classes')">Classes</button>
         <button class="dropdown-item" (click)="changeContext('Other')">Other</button>
       </div>
     </div>
@@ -18,6 +19,7 @@
         <a class="meals       nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Meals' }" (click)="changeContext('Meals')">Meals</a>
         <a class="teachers    nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Teachers' }" (click)="changeContext('Teachers')">Teachers</a>
         <a class="activities  nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Activities' }" (click)="changeContext('Activities')">Activities</a>
+        <a class="classes  nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Classes' }" (click)="changeContext('Classes')">Classes</a>
         <a class="other       nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Other' }" (click)="changeContext('Other')">Other</a>
       </div>
     </nav>
