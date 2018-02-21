@@ -15,7 +15,7 @@
     opacity: 0.6;
     height: 1px;
     width: 230px;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
 }
@@ -36,22 +36,18 @@
 }
 
 .name-container {
-  position: relative;
-  height: auto;
+  margin-top: 12px;
 
   .name {
     color: #9B9B9B;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 16px;
     letter-spacing: 1px;
-    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   }
 
 }
 
 .drop-down-container {
-  position: absolute;
-  top: .3em;
-  right: -35px;
 
   .drop-down-button {
     color: #9B9B9B;
@@ -66,4 +62,15 @@
 
   }
 
+}
+
+.dropdown-item {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  &:hover {
+    background: #CDBADD;
+    font-weight: 400;
+  }
 }
