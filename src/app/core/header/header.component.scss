@@ -123,6 +123,11 @@
     border: #D46111 solid 2px;
   }
 
+  &:hover .notification-icon {
+    top: -2px;
+    left: -13px;
+  }
+
 }
 
 .records {
