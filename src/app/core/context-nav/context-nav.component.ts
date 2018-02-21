@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-context-nav',
@@ -7,15 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContextNavComponent implements OnInit {
 
-  context = 'Kids';
+  @Output() contextChange: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  public context = 'Kids';
+
+  constructor() {
+    this.contextChange.emit(this.context);
+  }
 
   ngOnInit() {
   }
 
   changeContext( context: string ) {
     this.context = context;
+    this.contextChange.emit(context);
   }
 
 }

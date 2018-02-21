@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { ContextNavComponent } from './context-nav/context-nav.component';
 
 import { WindowService } from './services/window.service';
+import { HeaderContainerComponent } from './header-container/header-container.component';
 
 @NgModule({
   imports: [
@@ -11,11 +12,11 @@ import { WindowService } from './services/window.service';
   ],
   declarations: [
     HeaderComponent,
-    ContextNavComponent
+    ContextNavComponent,
+    HeaderContainerComponent
   ],
   exports: [
-    HeaderComponent,
-    ContextNavComponent
+    HeaderContainerComponent
   ],
   providers: [
     WindowService

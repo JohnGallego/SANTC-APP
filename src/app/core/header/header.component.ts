@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,18 +7,23 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @ViewChild('searchInput') searchInput: ElementRef;
-  isCollapsed = true;
-  context = 'View';
-  searchFocus = false;
+  @Output() contextChange: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  @ViewChild('searchInput') searchInput: ElementRef;
+  public isCollapsed = true;
+  public context = 'View';
+  public searchFocus = false;
+
+  constructor() {
+    this.contextChange.emit(this.context);
+  }
 
   ngOnInit() {
   }
 
   changeContext( context: string ) {
     this.context = context;
+    this.contextChange.emit(context);
   }
 
   searchInputFocus() {
