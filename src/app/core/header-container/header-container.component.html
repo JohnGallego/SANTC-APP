@@ -1,2 +1,2 @@
-<app-header (contextChange)="navContextChange($event)"></app-header>
-<app-context-nav (contextChange)="subContextChange($event)"></app-context-nav>
+<app-header (change)="navChange($event)" [nav]="nav$ | async"></app-header>
+<app-context-nav (change)="contextChange($event)" [context]="context$ | async"></app-context-nav>

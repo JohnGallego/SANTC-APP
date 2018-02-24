@@ -4,23 +4,23 @@
     <div ngbDropdown placement="right-top" class="d-inline-block d-sm-none mt-2">
       <button class="btn btn-outline-primary" id="dropdownContext" ngbDropdownToggle>{{ context }}</button>
       <div ngbDropdownMenu aria-labelledby="dropdownContext">
-        <button class="dropdown-item" (click)="changeContext('Kids')">Kids</button>
-        <button class="dropdown-item" (click)="changeContext('Meals')">Meals</button>
-        <button class="dropdown-item" (click)="changeContext('Teachers')">Teachers</button>
-        <button class="dropdown-item" (click)="changeContext('Activities')">Activities</button>
-        <button class="dropdown-item" (click)="changeContext('Classes')">Classes</button>
-        <button class="dropdown-item" (click)="changeContext('Other')">Other</button>
+        <button class="dropdown-item" (click)="change.emit('kids')">Kids</button>
+        <button class="dropdown-item" (click)="change.emit('meals')">Meals</button>
+        <button class="dropdown-item" (click)="change.emit('teachers')">Teachers</button>
+        <button class="dropdown-item" (click)="change.emit('activities')">Activities</button>
+        <button class="dropdown-item" (click)="change.emit('classes')">Classes</button>
+        <button class="dropdown-item" (click)="change.emit('other')">Other</button>
       </div>
     </div>
 
     <nav class="navbar navbar-collapse navbar-light bg-white d-none d-sm-block">
       <div class="navbar-nav d-flex flex-row">
-        <a class="kids        nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Kids' }" (click)="changeContext('Kids')">Kids</a>
-        <a class="meals       nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Meals' }" (click)="changeContext('Meals')">Meals</a>
-        <a class="teachers    nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Teachers' }" (click)="changeContext('Teachers')">Teachers</a>
-        <a class="activities  nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Activities' }" (click)="changeContext('Activities')">Activities</a>
-        <a class="classes     nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Classes' }" (click)="changeContext('Classes')">Classes</a>
-        <a class="other       nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'Other' }" (click)="changeContext('Other')">Other</a>
+        <a class="kids        nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'kids' }"        (click)="change.emit('kids')">Kids</a>
+        <a class="meals       nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'meals' }"       (click)="change.emit('meals')">Meals</a>
+        <a class="teachers    nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'teachers' }"    (click)="change.emit('teachers')">Teachers</a>
+        <a class="activities  nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'activities' }"  (click)="change.emit('activities')">Activities</a>
+        <a class="classes     nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'classes' }"     (click)="change.emit('classes')">Classes</a>
+        <a class="other       nav-item nav-link text-primary text-center mr-3 mt-1" [ngClass]="{ 'active': context === 'other' }"       (click)="change.emit('other')">Other</a>
       </div>
     </nav>
 

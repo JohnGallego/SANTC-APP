@@ -1,29 +1,25 @@
-import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import {
+    ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() contextChange: EventEmitter<string> = new EventEmitter<string>();
+  @Input() nav: string;
+  @Output() change: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('searchInput') searchInput: ElementRef;
   public isCollapsed = true;
-  public context = 'View';
   public searchFocus = false;
 
-  constructor() {
-    this.contextChange.emit(this.context);
-  }
+  constructor() {}
 
   ngOnInit() {
-  }
-
-  changeContext( context: string ) {
-    this.context = context;
-    this.contextChange.emit(context);
   }
 
   searchInputFocus() {

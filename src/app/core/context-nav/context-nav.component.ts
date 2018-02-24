@@ -1,26 +1,19 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-context-nav',
   templateUrl: './context-nav.component.html',
-  styleUrls: ['./context-nav.component.scss']
+  styleUrls: ['./context-nav.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContextNavComponent implements OnInit {
 
-  @Output() contextChange: EventEmitter<string> = new EventEmitter<string>();
+  @Input() context: string;
+  @Output() change: EventEmitter<string> = new EventEmitter<string>();
 
-  public context = 'Kids';
-
-  constructor() {
-    this.contextChange.emit(this.context);
-  }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  changeContext( context: string ) {
-    this.context = context;
-    this.contextChange.emit(context);
   }
 
 }
