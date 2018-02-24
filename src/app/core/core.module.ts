@@ -8,7 +8,7 @@ import { HeaderContainerComponent } from './header-container/header-container.co
 
 @NgModule({
   imports: [
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     HeaderComponent,
