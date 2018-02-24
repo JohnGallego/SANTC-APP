@@ -1,0 +1,37 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/mixins';
+@import '../../../_variables.scss';
+
+.container {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.student-card {
+  margin: 12px auto;
+  font-size: 21px;
+}
+
+@include media-breakpoint-up(sm) {
+
+  .student-card {
+    margin: 12px calc( (100% - ( 230px * 2)) / 4 );
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+
+  .student-card {
+    margin: 12px calc( (100% - ( 230px * 3)) / 6 );
+  }
+
+}
+
+@include media-breakpoint-up(xl) {
+
+  .student-card {
+    margin: 12px calc( (100% - ( 230px * 4)) / 8 );
+  }
+
+}
