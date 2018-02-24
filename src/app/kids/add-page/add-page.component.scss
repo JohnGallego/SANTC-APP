@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 20px;
+}
+
+form {
+  padding: 50px 45px;
+}
+
+.form-group {
+  width: 45%;
+}
+
+.actions {
+  width: 45%;
+}
+
+.instructions {
+  font-size: 16px;
+  color: #4A4A4A;
+  letter-spacing: 1px;
+}
