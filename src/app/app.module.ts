@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 // libs
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -15,6 +16,7 @@ import { CoreModule } from './core/core.module';
 // store
 import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CoreEffects } from './core/effects/core.effects';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
     // store
     StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([ CoreEffects ]),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],
