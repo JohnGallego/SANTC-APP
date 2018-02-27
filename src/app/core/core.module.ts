@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
-import { HeaderComponent } from './header/header.component';
-import { ContextNavComponent } from './context-nav/context-nav.component';
+import { GoogleSignInComponent } from 'angular-google-signin';
 
-import { WindowService } from './services/window.service';
+import { SharedModule } from '../shared/shared.module';
+import { ContextNavComponent } from './context-nav/context-nav.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
+import { HeaderComponent } from './header/header.component';
+import { WindowService } from './services/window.service';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,9 @@ import { HeaderContainerComponent } from './header-container/header-container.co
   declarations: [
     HeaderComponent,
     ContextNavComponent,
-    HeaderContainerComponent
+    HeaderContainerComponent,
+    SigninComponent,
+    GoogleSignInComponent
   ],
   exports: [
     HeaderContainerComponent
